@@ -10,16 +10,67 @@
 # TODO 1: Identify the information the movement process needs.
 # Consider the player's current room and movement command.
 
+START
+
+Create dictionary of rooms and room connections
+
+Set current_room = "Shuttle Cockpit"
+
+Create empty inventory list
+
+WHILE game is running
+      Display current room name
+      Display current invnetory
+
+      IF current room contains an item THEN
+          Display item available in room
+      ENDIF
+Promtpt player:
+"Enter a move:"
+"Use go North, go South, go East, go West"
+
+Input player_command
+
+
 # TODO 2: Prompt for and receive the player's movement command.
+
+Promtpt player:
+"Enter a move:"
+"Use go North, go South, go East, go West"
+
+Input player_command
+
+IF player_command starts with "go" THEN
+    Extract direction from player_command
+    IF direction is a valid direction from the current_room THEN
+        Update current_room to connected room
+        Display:
+        "You moved to [current_room]
 
 # TODO 3: Validate whether the requested movement is possible from the
 # current room. Show the decision clearly.
 
+IF direction is a valid direction from the current_room THEN
+    
 # TODO 4: Describe what happens when the movement command is valid.
 # Include the room update and player output.
+
+Move player to connected room with valid direction
+ Determined the direction input object == TRUE
+ Update current_room to connected room
+        Display:
+        "You moved to [current_room]
 
 # TODO 5: Describe what happens when the movement command is invalid.
 # Include the output the player should receive.
 
+IF the direction input from player_command is invalid THEN
+    Determined the direction input object == FALSE
+    Display:
+    "You can't go that way! Invalid input. try again."
+
 # TODO 6: Show how movement fits into repeated gameplay.
 # The final game continues accepting commands until a required ending occurs.
+
+WHILE Set gameRunning = TRUE
+    Continue to loop functions 1 through 5 to verify wether movement is valid.
