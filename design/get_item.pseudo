@@ -11,20 +11,65 @@ START get_item
 
     # TODO 1: Identify the information the get-item process needs.
     # Consider the current room, item in that room, and player's inventory.
+SET current_rom equal to the players location
+SET room_item equal to the item located in current_room
+SET inventory equal to the player's current inventory list
 
     # TODO 2: Prompt for and receive the player's get-item command.
+OUTPUT "Enter a command using: get [item name]
+INPUT player_command
+
+IF player_command begins with "get" THEN
+    EXTRACT item_requested from player_command
 
     # TODO 3: Validate whether the requested item is available in the current
     # room. Show the decision clearly.
 
+# Check if an item exists in the current room
+IF room_item exists in current_room THEN
+    # Compare the requested item to the room's item
+    IF item_requested equals room_item THEN
+        OUTPUT 'Item found."
+
     # TODO 4: Describe what happens when the item request is valid.
     # Include the inventory update and player output.
+
+IF item_requested equals room_item THEN
+        OUTPUT 'Item found."
+    # Add item to players inventory.
+    ADD room_item into inventory
+    # Remove item from room so it may not be collected again.
+    REMOVE room_item from current_room
+    OUTPUT room_item + "added to inventory."
+    OUTPUT "Current inventory"
+    OUTPUT Inventory
 
     # TODO 5: Describe what happens when the item request is invalid.
     # Include the output the player should receive.
 
+IF item_requested does not equal room item THEN
+    OUTPUT "That item is not in this room."
+    OUTPUT "Unable to collect item."
+ELSE
+    OUTPUT "There are no items in this room."
+    OUTPUT "Invalid item command."
+IF player command input is invalid THEN
+    OUTPUT "Invalid item command."
+    OUTPUT "Use the format: get [Item name]
+
     # TODO 6: Show how the process returns to or continues the larger gameplay
     # loop after the command is handled.
+
+# Return to the main gameplay loop.
+
+OUTPUT "Continuing game"
+
+RETURN to main game loop
+# The game loop will display:
+# Current room
+# Inventory
+# available item (if present)
+# Command prompt
 
 END get_item
 
