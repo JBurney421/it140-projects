@@ -7,25 +7,25 @@
 
 **Theme:**
 
-TODO: Name and briefly describe your game's theme.
+The name of my game is Astral Breakout. It is a space based game where the player is stuck on a Star Cruiser in space that has been taken over by a rouge AI named DANTE and must escape.
 
 **Storyline:**
 
-TODO: In one short paragraph, explain the setting, the player's goal, the items
-the player must gather, and the threat created by the villain.
+My game is called Astral breakout. The player is trapped on a damaged star cruiser that has been taken over by a rouge AI called DANTE. To shut down that AI and escape safely, the player must explore the shuttle and collect important equipment before entering the Core of the ship where the villain is located. The game contains eight rooms: Shuttle Cockpit (start room), Engineering Bay, Medical Lab, Crew Quarters, Communication Hub,
+Armory, Supply Storage, and Control Core. The player must collect six items: Repair Kit, Med Pack, Keycard, Radio, Energy Cell, and plasma shield. The villain is DANTE, the rouge AI that has taken control of the ship. This game requires the player to gather all items before confronting the villain and escaping the ship.
 
 ## Rooms
 
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
+1. TODO: Shuttle Cockpit (Start room)
+2. TODO: Engineering Bay
+3. TODO: Medical Lab
+4. TODO: Crew Quarters
+5. TODO: Communication Hub
+6. TODO: Armory
+7. TODO: Supply Storage
+8. TODO: Control Core (Villain room)
 
 Add more rooms if your design needs them.
 
@@ -34,19 +34,19 @@ Add more rooms if your design needs them.
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
+1. TODO: Repair Kit
+2. TODO: Med Pack
+3. TODO: Keycard
+4. TODO: Radio
+5. TODO: Energy Cell
+6. TODO: Plasma Shield
 
 If you add rooms beyond the minimum, add an item for every additional room
 except the start room and villain room.
 
 ## Villain
 
-TODO: Identify and briefly describe the villain.
+TODO: The villain is DANTE, the rouge AI that has taken control of the ship. This game requires the player to gather all items before confronting the villain and escaping the ship.
 
 ## Storyboard and Map Check
 
