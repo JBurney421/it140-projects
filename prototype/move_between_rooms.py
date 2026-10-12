@@ -1,22 +1,73 @@
 """Module Six Milestone starter for the simplified movement prototype."""
+ Astral Breakout
+# Jonathan Burney
+# Milestone: Move Between Rooms
 
-# A dictionary for the simplified dragon text game.
-# The dictionary links a room to other rooms.
+# Dictionary linking rooms together
 rooms = {
-    "Great Hall": {"south": "Bedroom"},
-    "Bedroom": {"north": "Great Hall", "east": "Cellar"},
-    "Cellar": {"west": "Bedroom"},
+    'Shuttle Cockpit': {
+        'north': 'Communications Hub',
+        'east': 'Crew Quarters',
+        'south': 'Armory',
+        'west': 'Supply Storage'
+    },
+    'Communications Hub': {
+        'south': 'Shuttle Cockpit',
+        'east': 'Medical Lab'
+    },
+    'Armory': {
+        'north': 'Shuttle Cockpit',
+        'east': 'Engineering Bay'
+    },
+    'Engineering Bay': {
+        'west': 'Armory'
+    },
+    'Supply Storage': {
+        'east': 'Shuttle Cockpit'
+    },
+    'Crew Quarters': {
+        'west': 'Shuttle Cockpit',
+        'north': 'Control Core'
+    },
+    'Medical Lab': {
+        'west': 'Communications Hub'
+    },
+    'Control Core': {
+        'south': 'Crew Quarters'
+    }
 }
 
+# Starting room
+current_room = 'Shuttle Cockpit'
 
-# TODO: Set the player's starting room for the simplified prototype.
+print("Welcome to Astral Breakout!")
+print("Move commands: go north, go south, go east, go west")
+print('Type "exit" to leave the game.')
 
-# TODO: Create the gameplay loop required by the milestone.
-# Within the loop, complete the required behavior in small steps:
-#   1. Display the current room.
-#   2. Prompt for a movement command or "exit".
-#   3. Branch for a valid move, exit, or invalid input.
-#   4. Update the room only after a valid movement command.
-#   5. Continue until the required exit condition is reached.
+# Gameplay loop
+while current_room != 'exit':
 
-# TODO: Run and debug all milestone cases in prototype/README.md.
+    print("\nYou are in the", current_room)
+
+    command = input("Enter your move: ").lower().strip()
+
+    # Exit command
+    if command == 'exit':
+        current_room = 'exit'
+
+    # Movement commands
+    elif command.startswith("go "):
+        direction = command.split()[1]
+
+        if direction in rooms[current_room]:
+            current_room: str = rooms[current_room][direction]
+            print("You moved to", current_room)
+        else:
+            print("You can't go that way.")
+
+    # Invalid command
+    else:
+        print("Invalid command.")
+        print("Use: go north, go south, go east, go west, or exit")
+
+print("\nThanks for playing Astral Breakout!")
